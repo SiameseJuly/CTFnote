@@ -21,15 +21,16 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
         self.request.send("""hello,welcome to halfbit
         This is Crypto test ,please help me do test """                     
         )
-        self.request.send(b'\n\n')
+        self.request.send(b'\nls\n')
 
     
         while True:
             self.request.send(b"\n's'um or 't'imes or 'p'rint\n")
-            c = self.request.recv(2)[:-1]
+            c = self.request.recv(1024)[:-1]
+            print c
         if c == b's':
             self.request.send(b'5 + 4 = ?\n')
-            c = self.request.recv(2)[:-1]
+            c = self.request.recv(1024)[:-1]
             if c == b'9':
                 self.request.send("ctf{sum}\n")
             else:
@@ -37,7 +38,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 
         elif c == b't':
             self.request.send(b'3 * 2 = ?\n')
-            c = self.request.recv(2)[:-1]  
+            c = self.request.recv(1024)[:-1]  
             if c == b'6':
                 self.request.send("ctf{times}\n")
             else:
