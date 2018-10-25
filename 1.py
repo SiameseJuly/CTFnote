@@ -28,7 +28,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
             self.request.send(b"\n's'um or 't'imes or 'p'rint\n")
             c = self.request.recv(1024)[:-1]
             print c
-        if c == b's':
+        if c == '1':
             self.request.send(b'5 + 4 = ?\n')
             c = self.request.recv(1024)[:-1]
             if c == b'9':
@@ -36,14 +36,14 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
             else:
                 self.request.send("wrong!\n")
                 
-        elif c == b't':
+        elif c == b'2':
             self.request.send(b'3 * 2 = ?\n')
             c = self.request.recv(1024)[:-1]  
             if c == b'6':
                 self.request.send("ctf{times}\n")
             else:
                 self.request.send("wrong!\n")            
-        elif c == b'p':
+        elif c == b'3':
             self.request.send("ctf{print}")
         self.request.close()        
         
