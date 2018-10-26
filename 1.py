@@ -44,7 +44,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("e = 65537\n")                
                 result  = self.request.recv(1024)[:-1]
                 
-                if result == "halfbit{19178568796155560423675975774142829153827883709027717723363077606260717434369}" :
+                if result == flag.flag1 :
                     
                     goal = 1
                     self.request.send("Correct !\n")  
@@ -66,7 +66,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("e = 23\n")    
                 result  = self.request.recv(1024)[:-1]
                 
-                if result == "halfbit{3a5Y}" :
+                if result == flag.flag2 :
                     goal = 2
                     self.request.send("Correct !\n")
                     continue
@@ -87,7 +87,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("e = 65537\n")                
                 result  = self.request.recv(1024)[:-1]
                 
-                if result == "halfbit{Modules_should_be_prime}" :
+                if result == flag.flag3 :
                     goal = 3
                     self.request.send("Correct !\n")
                     continue
@@ -108,7 +108,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("c2 = 0x4a03fdf2b92cf28f4f05c6778f828cb2086cfb4b880c8953ed54b36515fa05651107267177ba674c0468a1e069d33ca3094bd0f89dc3e0fccc4f3223608682e4f4526871d0b9b879504f25144864aad3845d83acfd6ed207f3fa573a6c32ad71563a5fe3f86a72a5ecc29519880b910258060d3f01995600e52414832efb01248c7daa33fed6250d03771b11e0a3fc42bf8f3bb858ebfd136ceb988812efafa826ffc5a53337af9feb593e8a4071489732d42727086df0945d0dd5ea97267a3c501a6f6160d165f006d9f1320982046409c5d816143b841fbc4f9104ae86419cdf70a510b4b3f5f5a96215d80f8a67ee2c43d0227ec7daa34b2a6b4a2ae6083c\n")
                 result  = self.request.recv(1024)[:-1]
                 
-                if result == "halfbit{Common_Modu1es_Attack_1s_easy}" :
+                if result == flag.flag4 :
                     goal = 4
                     self.request.send("Correct !\n")
                     continue
@@ -126,7 +126,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("Maybe is not like halfbit{********}\n")
                 result  = self.request.recv(1024)[:-1]
                 
-                if result == "PCTF{Sm4ll_3xpon3nt_i5_W3ak}" :
+                if result == flag.flag5 :
                     goal = 5
                     self.request.send("Correct !\n")
                     continue
@@ -144,7 +144,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("Maybe is not like halfbit{********}\n")
                 result  = self.request.recv(1024)[:-1]
                 
-                if result == "PCTF{sp3ci4l_rsa}" :
+                if result == flag.flag6 :
                     goal = 6
                     self.request.send("Correct !\n")
                     continue
@@ -167,11 +167,11 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 
                 result  = self.request.recv(1024)[:-1]
                 
-                if result == "halfbit{Bro4dc4st_4tt4ck_1s_so_e4sy}" :
+                if result == flag.flag7 :
                     goal = 7
                     self.request.send("Correct !\n")
                     self.request.send("Congratulatios! You have finished the basical RSA lessons!!!!\n")
-                    """
+                    print """
 　　　ＢＢＢＢＢＢＢＢ　　　　　　　　ＢＢＢＢＢＢＢ　　　　　　　　　　　ＢＢ　　　　　　
 　　　　　ＢＢ　ＢＢＢ　　　　　　　　ＢＢ　　　ＢＢ　　　　　　　　　　ＢＢＢ　　　　　　
 　　　　　Ｂ　　　ＢＢＢ　　　　　　　ＢＢ　　　　Ｂ　　　　　　　　　　ＢＢＢ　　　　　　
