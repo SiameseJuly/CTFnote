@@ -9,9 +9,18 @@ HOST = ''
 PORT = 21567
 
 ADDR = (HOST,PORT)
-print flag.flag1
+signal = """
+　　　ＢＢＢＢＢＢＢＢ　　　　　　　　ＢＢＢＢＢＢＢ　　　　　　　　　　　ＢＢ　　　　　　
+　　　　　ＢＢ　ＢＢＢ　　　　　　　　ＢＢ　　　ＢＢ　　　　　　　　　　ＢＢＢ　　　　　　
+　　　　　Ｂ　　　ＢＢＢ　　　　　　　ＢＢ　　　　Ｂ　　　　　　　　　　ＢＢＢ　　　　　　
+　　　　　Ｂ　　　ＢＢ　　　　　　　　ＢＢＢＢ　　　　　　　　　　　　　Ｂ　ＢＢ　　　　　
+　　　　　ＢＢＢＢＢＢ　　　　　　　　　ＢＢＢＢＢＢ　　　　　　　　　ＢＢ　ＢＢ　　　　　
+　　　　　ＢＢ　ＢＢＢ　　　　　　　　　　　　ＢＢＢ　　　　　　　　　ＢＢＢＢＢＢ　　　　
+　　　　　Ｂ　　　ＢＢ　　　　　　　　Ｂ　　　　ＢＢ　　　　　　　　ＢＢ　　　ＢＢ　　　　
+　　　　　Ｂ　　　ＢＢＢ　　　　　　　ＢＢ　　　ＢＢ　　　　　　　　ＢＢ　　　ＢＢ　　　　
+　　　ＢＢＢＢＢ　ＢＢＢ　　　　　　　ＢＢＢＢＢＢＢ　　　　　　　ＢＢＢ　　ＢＢＢＢＢ　　
 
-
+                    """
 class MyRequestHandler(SocketServer.StreamRequestHandler):
     """"""
 
@@ -41,7 +50,8 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("if you get the d,give me halfbit{********}\n")
                 self.request.send("p = 3487583947589437589237958723892346254777\n")
                 self.request.send("q = 8767867843568934765983476584376578389\n")
-                self.request.send("e = 65537\n")                
+                self.request.send("e = 65537\n")      
+                self.request.send("Please submit the Flag:\n")  
                 result  = self.request.recv(1024)[:-1]
                 
                 if result == flag.flag1 :
@@ -63,7 +73,8 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("N = 322831561921859\n")
                 # p =13574881
                 # q = 23781539
-                self.request.send("e = 23\n")    
+                self.request.send("e = 23\n")
+                self.request.send("Please submit the Flag:\n")     
                 result  = self.request.recv(1024)[:-1]
                 
                 if result == flag.flag2 :
@@ -84,7 +95,8 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("N2 = 13225948396179603816062046418717214792668512413625091569997524364243995991961018894150059207824093837420451375240550310050209398964506318518991620142575926623780411532257230701985821629425722030608722035570690474171259238153947095310303522831971664666067542649034461621725656234869005501293423975184701929729170077280251436216167293058560030089006140224375425679571181787206982712477261432579537981278055755344573767076951793312062480275004564657590263719816033564139497109942073701755011873153205366238585665743\n")
                 self.request.send("c1 = 0x1b19e2c03eef1d467ee942b63826cd122695e4698c787250f1d215f3390470512e70ad5eb49ae64fa2481fe84aa962a587f1be356428d373ad6c45433d52acc6330aea207328b78dc51b392bdcb81195d9ee72bc6b4ee113f37735964415a5410e674b7409e4b063729217259af0f9d0496ac24ef55f768bff36916eb3f162aeaa3ac0583ba26d0df4d3c4dffd009062e0d7699ecf23373091e6fa0d6b5b40e47c9660313706e26d1d45bd40b787aecdc37d6e59886173ad56408f99a5efea132592f594d9101d96cd827422a874265fe1b5a265a\n")
                 self.request.send("c2 = 0x15317d73a321371d33a73b0e6b601d9a368d5e92551828b5eebb94d789afc5e55f5bbf097565328b13669bc22083bddb3ac33e58b514c990ff83b8b48720612aa31586f39071adda45490b3fd64620ec82038931020624f69fa2557c1dfdb8a9d1e31fad025def33326293db424561e650d444df58a58b013823e08f9102671bd12c2498c8531321937d47f52edda0ce73281c703f98354e9440fc76e91a3e6d7a8cd2913436bdc5c889891471a9cb1bc708d89539159140c9dd28e2c8647ec925d17cea0f0f6a36285019998c0667e38c8cdb4c2\n")
-                self.request.send("e = 65537\n")                
+                self.request.send("e = 65537\n")
+                self.request.send("Please submit the Flag:\n")                
                 result  = self.request.recv(1024)[:-1]
                 
                 if result == flag.flag3 :
@@ -106,6 +118,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("c1 = 0x17af1d865c682e3d071c9cebb3f83e9784fec1189c91c6ee8c95c11d051bfbd8c9b77b87bd792e88bf0c9cd5251b7ea88fb3dff8432d9ce96bbde536febe27603f06bfe5b430ca1f3f4fb53a4bb51c26809426a56f57ad30406d2a7699f8fe9aeb50cb48344a96d845f6e6fb8cd21708e174fe5dba701b5f1ab7d6739609f3c1fc491a65a529438e2734dec7d1d24099829292de4ab4d308df794387777e5930d2477eaa21270516ffa2cf738f057dc037e27548eec2a0ed434b496b8ce85d2e7b8bf8e72ba9e69f18e5d3f71123412a34972ea985a8b2e6bfa7603b6afbf831157c4ee8eb914356bafac2d4383344cdf26fc4ce3efed6220a841afd03d38fed\n")                
                 self.request.send("e2 = 0x1091\n")
                 self.request.send("c2 = 0x4a03fdf2b92cf28f4f05c6778f828cb2086cfb4b880c8953ed54b36515fa05651107267177ba674c0468a1e069d33ca3094bd0f89dc3e0fccc4f3223608682e4f4526871d0b9b879504f25144864aad3845d83acfd6ed207f3fa573a6c32ad71563a5fe3f86a72a5ecc29519880b910258060d3f01995600e52414832efb01248c7daa33fed6250d03771b11e0a3fc42bf8f3bb858ebfd136ceb988812efafa826ffc5a53337af9feb593e8a4071489732d42727086df0945d0dd5ea97267a3c501a6f6160d165f006d9f1320982046409c5d816143b841fbc4f9104ae86419cdf70a510b4b3f5f5a96215d80f8a67ee2c43d0227ec7daa34b2a6b4a2ae6083c\n")
+                self.request.send("Please submit the Flag:\n")
                 result  = self.request.recv(1024)[:-1]
                 
                 if result == flag.flag4 :
@@ -124,6 +137,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("Download the file: https://static2.ichunqiu.com/icq/resources/fileupload/phrackCTF/CRYPTO/extremelyhardRSA.rar")
                 self.request.send("if you get the m,give me directly !\n")
                 self.request.send("Maybe is not like halfbit{********}\n")
+                self.request.send("Please submit the Flag:\n")
                 result  = self.request.recv(1024)[:-1]
                 
                 if result == flag.flag5 :
@@ -142,6 +156,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("Download the file:  https://static2.ichunqiu.com/icq/resources/fileupload/phrackCTF/CRYPTO/hardRSA.rar\n")
                 self.request.send("if you get the m,give me directly !\n")
                 self.request.send("Maybe is not like halfbit{********}\n")
+                self.request.send("Please submit the Flag:\n")
                 result  = self.request.recv(1024)[:-1]
                 
                 if result == flag.flag6 :
@@ -164,6 +179,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send("c2 = 0x218b37071a30e6276e543c9f0a2f4a1d8d61a10afba951fa33df6e705388b8b8b6a6c468b7643088a6ffed56f3e3a58c05195942d40d231fcd1ab4775c9c0f3beb10d38d736e1c1f3d093b16ce934e7fd3422f3fc66360eec34b9800ff78d07c1a0bb53cfbe4ecb36724f1bcb69e25b50ad6df3ea8a7864de223ca48540dec8c77be550b9548b6f2c481d8ebaec2b9cdb1ce985e0c48914c436f895571396085c7473bc19259a0f9fd4602718e8c4a52695ed392729104af211b9ffef2324ce738e18f8bd7ae8205181d63048b41625f1ef0d6a4743331e42c41cf19b48c92a3185049dc8cec17f914b4dd2acf1659c1a3764f9d2d38063dfe0896b547c0cf72\n")
                 self.request.send("n3 = 0x280f992dd63fcabdcb739f52c5ed1887e720cbfe73153adf5405819396b28cb54423d196600cce76c8554cd963281fc4b153e3b257e96d091e5d99567dd1fa9ace52511ace4da407f5269e71b1b13822316d751e788dc935d63916075530d7fb89cbec9b02c01aef19c39b4ecaa1f7fe2faf990aa938eb89730eda30558e669da5459ed96f1463a983443187359c07fba8e97024452087b410c9ac1e39ed1c74f380fd29ebdd28618d60c36e6973fc87c066cae05e9e270b5ac25ea5ca0bac5948de0263d8cc89d91c4b574202e71811d0ddf1ed23c1bc35f3a042aac6a0bdf32d37dede3536f70c257aafb4cfbe3370cd7b4187c023c35671de3888a1ed1303\n")
                 self.request.send("c3 = 0x15756c5884f272a92d8434f13bcf98e6029c6a51dd57d6ee899115c5d19879e4daf7be85d63fd1b2a69647c8d1cf40b7d3856ac9120f2bba861fa663c85b5af25c7bf48481d5799fa6c5bf62e5617b1f6f899a9b50652aeeb5b93ca3df954422f95794126459d499d8cc7def5bf5c6019adfbd29e5d04f3936f6421ec6e703dffa3b9b6f04e73ca75abf034d5acea877c38df6da674124ca7890a0ccdaca4b04e0d7662e230bf8bd52ee66f6a121b733ab32564a2aaaaf297982bc912afd5790d839580443dc77e6f22e90e38c8dae464ca64505601d3a2b015f9ae1bb15d978f013e3dfe5ad7bfbaaa2e5e78c6609710d17b5c7bf485b22f6dd39c3344869ac\n")
+                self.request.send("Please submit the Flag:\n")
                 
                 result  = self.request.recv(1024)[:-1]
                 
@@ -171,18 +187,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                     goal = 7
                     self.request.send("Correct !\n")
                     self.request.send("Congratulatios! You have finished the basical RSA lessons!!!!\n")
-                    print """
-　　　ＢＢＢＢＢＢＢＢ　　　　　　　　ＢＢＢＢＢＢＢ　　　　　　　　　　　ＢＢ　　　　　　
-　　　　　ＢＢ　ＢＢＢ　　　　　　　　ＢＢ　　　ＢＢ　　　　　　　　　　ＢＢＢ　　　　　　
-　　　　　Ｂ　　　ＢＢＢ　　　　　　　ＢＢ　　　　Ｂ　　　　　　　　　　ＢＢＢ　　　　　　
-　　　　　Ｂ　　　ＢＢ　　　　　　　　ＢＢＢＢ　　　　　　　　　　　　　Ｂ　ＢＢ　　　　　
-　　　　　ＢＢＢＢＢＢ　　　　　　　　　ＢＢＢＢＢＢ　　　　　　　　　ＢＢ　ＢＢ　　　　　
-　　　　　ＢＢ　ＢＢＢ　　　　　　　　　　　　ＢＢＢ　　　　　　　　　ＢＢＢＢＢＢ　　　　
-　　　　　Ｂ　　　ＢＢ　　　　　　　　Ｂ　　　　ＢＢ　　　　　　　　ＢＢ　　　ＢＢ　　　　
-　　　　　Ｂ　　　ＢＢＢ　　　　　　　ＢＢ　　　ＢＢ　　　　　　　　ＢＢ　　　ＢＢ　　　　
-　　　ＢＢＢＢＢ　ＢＢＢ　　　　　　　ＢＢＢＢＢＢＢ　　　　　　　ＢＢＢ　　ＢＢＢＢＢ　　
-
-                    """
+                    print signal
                     self.server.close()
                 
                 else:   
