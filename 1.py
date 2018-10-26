@@ -188,6 +188,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                     self.request.send("Correct !\n")
                     self.request.send("Congratulatios! You have finished the basical RSA lessons!!!!\n")
                     print signal
+                    self.request.send(signal)
                     self.server.close()
                 
                 else:   
