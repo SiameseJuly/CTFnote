@@ -129,7 +129,7 @@ class MyRequestHandler(SocketServer.StreamRequestHandler):
                     self.request.send("Try again!!!!!\n")
                     continue 
                 
-            elif level == 4 :
+            elif level == 5 :
                 print "level = ",level
                 print "goal = ",goal
                 self.request.send("Level NO.5 Rabin!\n")
