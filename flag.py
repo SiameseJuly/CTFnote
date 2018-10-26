@@ -1,0 +1,7 @@
+flag1 = "halfbit{19178568796155560423675975774142829153827883709027717723363077606260717434369}"
+flag2 = "halfbit{3a5Y}"
+flag3 = "halfbit{Modules_should_be_prime}"
+flag4 = "halfbit{Common_Modu1es_Attack_1s_easy}"
+flag5 = "PCTF{Sm4ll_3xpon3nt_i5_W3ak}"
+flag6 = "PCTF{sp3ci4l_rsa}"
+flag7 = "halfbit{Bro4dc4st_4tt4ck_1s_so_e4sy}" 
